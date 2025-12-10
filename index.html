@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripDuel - Wybierz swój wymarzony wyjazd!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Ekran Startowy -->
+        <div id="welcome-screen" class="screen active">
+            <div class="logo">
+                <i class="fas fa-plane-duel"></i>
+                <h1>Trip<span>Duel</span></h1>
+            </div>
+            <p class="tagline">Wybierz lepszą opcję w każdym pojedynku, a my znajdziemy dla Ciebie idealny wyjazd!</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-filter"></i>
+                    <p>Podaj swoje preferencje</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-fist-raised"></i>
+                    <p>Wybieraj w pojedynkach</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-trophy"></i>
+                    <p>Otrzymaj idealną rekomendację</p>
+                </div>
+            </div>
+            
+            <button id="start-btn" class="btn-primary">
+                Rozpocznij przygodę <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Ekran Konfiguracji -->
+        <div id="config-screen" class="screen">
+            <h2><i class="fas fa-sliders-h"></i> Skonfiguruj swój wyjazd</h2>
+            
+            <div class="config-form">
+                <div class="form-group">
+                    <label for="who"><i class="fas fa-users"></i> Dla kogo jest wyjazd?</label>
+                    <div class="options">
+                        <div class="option" data-value="single">
+                            <i class="fas fa-user"></i>
+                            <span>Singiel/ka</span>
+                        </div>
+                        <div class="option" data-value="couple">
+                            <i class="fas fa-heart"></i>
+                            <span>Para</span>
+                        </div>
+                        <div class="option" data-value="family">
+                            <i class="fas fa-home"></i>
+                            <span>Rodzina</span>
+                        </div>
+                        <div class="option" data-value="friends">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Przyjaciele</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="who" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="duration"><i class="fas fa-calendar-alt"></i> Na jak długo?</label>
+                    <div class="options">
+                        <div class="option" data-value="weekend">
+                            <i class="fas fa-sun"></i>
+                            <span>Weekend (2-3 dni)</span>
+                        </div>
+                        <div class="option" data-value="long-weekend">
+                            <i class="fas fa-moon"></i>
+                            <span>Długi weekend (4-5 dni)</span>
+                        </div>
+                        <div class="option" data-value="week">
+                            <i class="fas fa-suitcase"></i>
+                            <span>Tydzień (6-8 dni)</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="duration" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="budget"><i class="fas fa-wallet"></i> Budżet (za osobę)?</label>
+                    <div class="options">
+                        <div class="option" data-value="budget">
+                            <i class="fas fa-coins"></i>
+                            <span>Ekonomiczny (do 1000 zł)</span>
+                        </div>
+                        <div class="option" data-value="medium">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Średni (1000-2000 zł)</span>
+                        </div>
+                        <div class="option" data-value="premium">
+                            <i class="fas fa-crown"></i>
+                            <span>Premium (2000+ zł)</span>
+                        </div>
+                    </div>
+                    <input type="hidden" id="budget" value="">
+                </div>
+            </div>
+
+            <button id="start-duel-btn" class="btn-primary" disabled>
+                Rozpocznij pojedynki! <i class="fas fa-fist-raised"></i>
+            </button>
+            <button id="back-to-welcome" class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Wstecz
+            </button>
+        </div>
+
+        <!-- Ekran Pojedynku -->
+        <div id="duel-screen" class="screen">
+            <div class="duel-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="criteria-display">
+                    <span id="current-criteria">Która opcja bardziej Ci się podoba?</span>
+                    <span class="round-counter" id="round-counter">Runda 1/8</span>
+                </div>
+            </div>
+
+            <div class="duel-container">
+                <div class="duel-card" id="card1" data-id="">
+                    <div class="card-image" id="image1"></div>
+                    <div class="card-content">
+                        <h3 id="title1">Tytuł miejsca 1</h3>
+                        <div class="card-tags" id="tags1"></div>
+                        <p id="desc1">Opis miejsca 1...</p>
+                        <div class="card-info" id="info1"></div>
+                    </div>
+                    <button class="card-btn" data-card="1">WYBIERZ TĘ OPCJĘ</button>
+                </div>
+
+                <div class="vs-circle">VS</div>
+
+                <div class="duel-card" id="card2" data-id="">
+                    <div class="card-image" id="image2"></div>
+                    <div class="card-content">
+                        <h3 id="title2">Tytuł miejsca 2</h3>
+                        <div class="card-tags" id="tags2"></div>
+                        <p id="desc2">Opis miejsca 2...</p>
+                        <div class="card-info" id="info2"></div>
+                    </div>
+                    <button class="card-btn" data-card="2">WYBIERZ TĘ OPCJĘ</button>
+                </div>
+            </div>
+
+            <div class="duel-controls">
+                <button id="skip-btn" class="btn-secondary">
+                    <i class="fas fa-redo"></i> Pomiń tę parę
+                </button>
+                <button id="change-criteria-btn" class="btn-secondary">
+                    <i class="fas fa-random"></i> Zmień kryterium
+                </button>
+            </div>
+        </div>
+
+        <!-- Ekran Wyników -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <i class="fas fa-trophy trophy-icon"></i>
+                <h2>Twój idealny wyjazd!</h2>
+                <p>Na podstawie Twoich wyborów polecamy:</p>
+            </div>
+
+            <div class="results-container" id="results-container">
+                <!-- Wyniki zostaną wstawione tutaj -->
+            </div>
+
+            <div class="results-summary">
+                <h3><i class="fas fa-chart-pie"></i> Twoje preferencje</h3>
+                <div class="preferences" id="preferences-list">
+                    <!-- Preferencje zostaną wstawione tutaj -->
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button id="new-duel-btn" class="btn-primary">
+                    <i class="fas fa-redo"></i> Nowy pojedynek
+                </button>
+                <button id="share-btn" class="btn-secondary">
+                    <i class="fas fa-share-alt"></i> Udostępnij
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>TripDuel MVP © 2024 | Aplikacja demonstracyjna</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
