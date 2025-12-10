@@ -18,7 +18,7 @@ const AppState = {
     }
 };
 
-// Baza destynacji (Polska)
+// Baza destynacji (Polska) z linkami do zewnętrznych serwisów
 const destinations = [
     {
         id: 1,
@@ -32,7 +32,24 @@ const destinations = [
             coupleScore: 7,
             activityLevel: 8
         },
-        imageColor: "#2E8B57"
+        imageColor: "#2E8B57",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Mazury&ssne=Mazury&ssne_untouched=Mazury&dest_type=region",
+                description: "Hotele i pensjonaty na Mazurach"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/mazury",
+                description: "Noclegi w sercu Mazur"
+            },
+            {
+                provider: "Casamundo",
+                url: "https://www.casamundo.pl/vacation-rentals/polska/mazury",
+                description: "Apartamenty i domy wakacyjne"
+            }
+        ]
     },
     {
         id: 2,
@@ -46,7 +63,24 @@ const destinations = [
             coupleScore: 8,
             activityLevel: 9
         },
-        imageColor: "#4682B4"
+        imageColor: "#4682B4",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Tatry&ssne=Tatry&ssne_untouched=Tatry&dest_type=region",
+                description: "Zakwaterowanie w Tatrach"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/tatry",
+                description: "Noclegi w Tatrach"
+            },
+            {
+                provider: "e-turysta.pl",
+                url: "https://www.e-turysta.pl/tatry",
+                description: "Kwatery prywatne w Tatrach"
+            }
+        ]
     },
     {
         id: 3,
@@ -60,7 +94,24 @@ const destinations = [
             coupleScore: 9,
             activityLevel: 6
         },
-        imageColor: "#1E90FF"
+        imageColor: "#1E90FF",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Sopot&ssne=Sopot&ssne_untouched=Sopot",
+                description: "Hotele w Sopocie"
+            },
+            {
+                provider: "Trivago",
+                url: "https://www.trivago.pl/sopot-34954/hotel",
+                description: "Porównanie cen hoteli"
+            },
+            {
+                provider: "Airbnb",
+                url: "https://www.airbnb.pl/s/Sopot--Polska/homes",
+                description: "Mieszkania i apartamenty"
+            }
+        ]
     },
     {
         id: 4,
@@ -74,7 +125,24 @@ const destinations = [
             coupleScore: 9,
             activityLevel: 7
         },
-        imageColor: "#32CD32"
+        imageColor: "#32CD32",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Bieszczady&ssne=Bieszczady&ssne_untouched=Bieszczady&dest_type=region",
+                description: "Noclegi w Bieszczadach"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/bieszczady",
+                description: "Kwatery i agroturystyka"
+            },
+            {
+                provider: "e-turysta.pl",
+                url: "https://www.e-turysta.pl/bieszczady",
+                description: "Szlaki i noclegi"
+            }
+        ]
     },
     {
         id: 5,
@@ -88,7 +156,24 @@ const destinations = [
             coupleScore: 9,
             activityLevel: 5
         },
-        imageColor: "#DC143C"
+        imageColor: "#DC143C",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Kraków&ssne=Kraków&ssne_untouched=Kraków",
+                description: "Hotele w centrum Krakowa"
+            },
+            {
+                provider: "Airbnb",
+                url: "https://www.airbnb.pl/s/Kraków--Polska/homes",
+                description: "Apartamenty w Krakowie"
+            },
+            {
+                provider: "Trivago",
+                url: "https://www.trivago.pl/krakow-38486/hotel",
+                description: "Porównywarka hoteli"
+            }
+        ]
     },
     {
         id: 6,
@@ -102,7 +187,24 @@ const destinations = [
             coupleScore: 8,
             activityLevel: 7
         },
-        imageColor: "#8A2BE2"
+        imageColor: "#8A2BE2",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Karkonosze&ssne=Karkonosze&ssne_untouched=Karkonosze&dest_type=region",
+                description: "Hotele w Karkonoszach"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/karkonosze",
+                description: "Noclegi u podnóża gór"
+            },
+            {
+                provider: "e-turysta.pl",
+                url: "https://www.e-turysta.pl/karkonosze",
+                description: "Spa i noclegi"
+            }
+        ]
     },
     {
         id: 7,
@@ -116,7 +218,24 @@ const destinations = [
             coupleScore: 7,
             activityLevel: 5
         },
-        imageColor: "#20B2AA"
+        imageColor: "#20B2AA",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Hel&ssne=Hel&ssne_untouched=Hel",
+                description: "Noclegi na półwyspie"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/hel",
+                description: "Pensjonaty nad morzem"
+            },
+            {
+                provider: "Casamundo",
+                url: "https://www.casamundo.pl/vacation-rentals/polska/pomorze/hel",
+                description: "Domy wakacyjne"
+            }
+        ]
     },
     {
         id: 8,
@@ -130,7 +249,24 @@ const destinations = [
             coupleScore: 8,
             activityLevel: 8
         },
-        imageColor: "#6495ED"
+        imageColor: "#6495ED",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Zakopane&ssne=Zakopane&ssne_untouched=Zakopane",
+                description: "Hotele w centrum Zakopanego"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/zakopane",
+                description: "Kwatery i apartamenty"
+            },
+            {
+                provider: "Trivago",
+                url: "https://www.trivago.pl/zakopane-35043/hotel",
+                description: "Porównanie cen"
+            }
+        ]
     },
     {
         id: 9,
@@ -144,7 +280,24 @@ const destinations = [
             coupleScore: 8,
             activityLevel: 6
         },
-        imageColor: "#FF4500"
+        imageColor: "#FF4500",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Wrocław&ssne=Wrocław&ssne_untouched=Wrocław",
+                description: "Hotele w centrum Wrocławia"
+            },
+            {
+                provider: "Airbnb",
+                url: "https://www.airbnb.pl/s/Wrocław--Polska/homes",
+                description: "Mieszkania i apartamenty"
+            },
+            {
+                provider: "Trivago",
+                url: "https://www.trivago.pl/wroclaw-84784/hotel",
+                description: "Porównywarka cen"
+            }
+        ]
     },
     {
         id: 10,
@@ -158,7 +311,24 @@ const destinations = [
             coupleScore: 6,
             activityLevel: 6
         },
-        imageColor: "#228B22"
+        imageColor: "#228B22",
+        externalLinks: [
+            {
+                provider: "Booking.com",
+                url: "https://www.booking.com/searchresults.pl.html?ss=Białowieża&ssne=Białowieża&ssne_untouched=Białowieża",
+                description: "Noclegi w Puszczy Białowieskiej"
+            },
+            {
+                provider: "Noclegi.pl",
+                url: "https://www.noclegi.pl/bialowieza",
+                description: "Agroturystyka i pensjonaty"
+            },
+            {
+                provider: "e-turysta.pl",
+                url: "https://www.e-turysta.pl/bialowieza",
+                description: "Wycieczki z przewodnikiem"
+            }
+        ]
     }
 ];
 
@@ -448,6 +618,10 @@ function showResults() {
     
     displayResults(rankedDestinations);
     displayUserPreferences();
+    
+    // Dodaj przyciski ofert po wyświetleniu wyników
+    setTimeout(addOfferButtonsToResults, 100);
+    
     showScreen('results');
 }
 
@@ -519,8 +693,8 @@ function displayUserPreferences() {
 function getPreferenceText(value, type) {
     const maps = {
         who: { single: 'Singiel/ka', couple: 'Para', family: 'Rodzina', friends: 'Przyjaciele' },
-        duration: { weekend: 'Weekend', 'long-weekend': 'Długi weekend', week: 'Tydzień' },
-        budget: { budget: 'Ekonomiczny', medium: 'Średni', premium: 'Premium' }
+        duration: { weekend: 'Weekend (2-3 dni)', 'long-weekend': 'Długi weekend (4-5 dni)', week: 'Tydzień (6-8 dni)' },
+        budget: { budget: 'Ekonomiczny (do 1000 zł)', medium: 'Średni (1000-2000 zł)', premium: 'Premium (2000+ zł)' }
     };
     
     return maps[type][value] || value;
@@ -531,15 +705,116 @@ function getTopTags() {
     const tagCount = {};
     AppState.duelState.userChoices.forEach(choice => {
         const winner = AppState.duelState.currentPair.find(d => d.id === choice.winner);
-        winner.tags.forEach(tag => {
-            tagCount[tag] = (tagCount[tag] || 0) + 1;
-        });
+        if (winner && winner.tags) {
+            winner.tags.forEach(tag => {
+                tagCount[tag] = (tagCount[tag] || 0) + 1;
+            });
+        }
     });
     
     return Object.entries(tagCount)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 3)
         .map(([tag]) => tag);
+}
+
+// FUNKCJE DO WYŚWIETLANIA OFERT Z ZEWNĘTRZNYCH SERWISÓW
+
+// Funkcja do wyświetlania modal z ofertami
+function showOffersForDestination(destinationId) {
+    const destination = destinations.find(d => d.id === destinationId);
+    
+    if (!destination || !destination.externalLinks || destination.externalLinks.length === 0) {
+        alert('Brak dostępnych ofert dla tej destynacji.');
+        return;
+    }
+    
+    // Tworzymy modal
+    const modal = document.createElement('div');
+    modal.className = 'offers-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-external-link-alt"></i> Prawdziwe oferty: ${destination.name}</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">${destination.description}</p>
+                <div class="offers-list">
+                    ${destination.externalLinks.map(link => `
+                        <a href="${link.url}" target="_blank" class="offer-card">
+                            <div class="offer-provider">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>${link.provider}</span>
+                            </div>
+                            <p class="offer-desc">${link.description}</p>
+                            <div class="offer-cta">
+                                Sprawdź oferty
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+                <div class="comparison-note">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong>Porównaj oferty:</strong> Sprawdź ceny w różnych serwisach, aby znaleźć najlepszą ofertę!
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Dodajemy modal do body
+    document.body.appendChild(modal);
+    
+    // Obsługa zamknięcia modala
+    modal.querySelector('.close-modal').addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+    
+    // Zamknij po kliknięciu poza treścią
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    });
+    
+    // Dodaj klawisz Escape do zamknięcia
+    document.addEventListener('keydown', function closeOnEscape(e) {
+        if (e.key === 'Escape') {
+            document.body.removeChild(modal);
+            document.removeEventListener('keydown', closeOnEscape);
+        }
+    });
+}
+
+// Funkcja do dodania przycisków ofert na ekranie wyników
+function addOfferButtonsToResults() {
+    const resultsContainer = document.getElementById('results-container');
+    if (!resultsContainer) return;
+    
+    const rankedDestinations = AppState.duelState.availableDestinations
+        .map(dest => ({
+            ...dest,
+            score: AppState.duelState.scores[dest.id] || 0
+        }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3);
+    
+    // Dodajemy przyciski do każdej karty wyników
+    document.querySelectorAll('.result-card').forEach((card, index) => {
+        const destination = rankedDestinations[index];
+        
+        if (destination) {
+            const offerButton = document.createElement('button');
+            offerButton.className = 'btn-offer';
+            offerButton.innerHTML = '<i class="fas fa-search-dollar"></i> Znajdź oferty wyjazdu';
+            offerButton.addEventListener('click', () => {
+                showOffersForDestination(destination.id);
+            });
+            
+            card.appendChild(offerButton);
+        }
+    });
 }
 
 // Pomocnicze funkcje
@@ -576,6 +851,12 @@ function restartApp() {
     document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
     document.querySelectorAll('input[type="hidden"]').forEach(input => input.value = '');
     document.getElementById('start-duel-btn').disabled = true;
+    
+    // Usuń ewentualne otwarte modale
+    const existingModal = document.querySelector('.offers-modal');
+    if (existingModal) {
+        document.body.removeChild(existingModal);
+    }
     
     // Wróć do konfiguracji
     showConfigScreen();
